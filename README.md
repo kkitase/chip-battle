@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 TPU vs GPU Battle Master
 
-# Run and deploy your AI Studio app
+TPUとGPUの違いを学べるインタラクティブな比較ツール。リアルタイムシミュレーション、最新の企業採用事例、AIアドバイザーを搭載。
 
-This contains everything you need to run your app locally.
+## ✨ 機能
 
-View your app in AI Studio: https://ai.studio/apps/drive/1z8y5b4qQkvGS9oJsuPvyZZObfCp14bxN
+- **🔬 Simulation Lab** - TPU/GPUのパフォーマンス・コストをリアルタイムで比較シミュレーション
+- **📊 最新事例** - Gemini Search Groundingで実際の企業採用事例を取得・表示
+- **💻 コードサンプル** - チップごとに最適なフレームワーク（JAX/PyTorch）のサンプルコードを表示
+- **🤖 AI Advisor** - GPUとTPUの違いについて何でも質問できるチャットボット
 
-## Run Locally
+## 🛠️ 技術スタック
 
-**Prerequisites:**  Node.js
+- **Frontend**: React + TypeScript + Vite
+- **Styling**: TailwindCSS
+- **AI API**: Google Gemini API (`gemini-3-flash-preview`)
+- **Grounding**: Google Search Grounding
 
+## 🚀 ローカル実行
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**必要条件:** Node.js
+
+```bash
+# 依存関係インストール
+npm install
+
+# .env.local に Gemini API キーを設定
+echo "API_KEY=your_gemini_api_key" > .env.local
+
+# 開発サーバー起動
+npm run dev
+```
+
+http://localhost:3000 でアクセス
+
+## 📁 プロジェクト構成
+
+```
+chip-battle/
+├── App.tsx                 # メインアプリ
+├── components/
+│   ├── FineTuningLab.tsx   # シミュレーションラボ
+│   ├── CaseStudyViewer.tsx # 事例表示
+│   ├── AIAdvisor.tsx       # AIチャット
+│   └── Visualizer.tsx      # アーキテクチャ可視化
+├── services/
+│   └── geminiService.ts    # Gemini API
+├── constants.ts            # チップスペック定義
+└── types.ts                # 型定義
+```
+
+## 📝 ライセンス
+
+MIT
